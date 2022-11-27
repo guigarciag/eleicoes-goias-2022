@@ -1,0 +1,118 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="Front_End_Eleicoes_Goias.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Eleições 2022</title>
+    <link href="App_Themes/Style.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {}
+        .auto-style2 {}
+        .auto-style3 {}
+    </style>
+
+</head>
+
+<body>
+         <div id="cabecalho">
+                <div id="texto">
+             <h1>Eleições 2022 - Goiás</h1>
+              <img id="foto_bandeira" src="App_Themes/Bandeira.png"/ alt="Foto da bandeira de Goiás">
+                </div>
+             <img id="foto_urna" src="App_Themes/Urna-eletronica.jpeg"/ alt="Foto de uma Urna Eletrônica">
+          </div>
+    <form id="form1" runat="server">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"> </asp:ContentPlaceHolder>
+          <div ID="procura" class="procura">
+              <div id="ddl">
+             <div class="ddl_wrap">
+                <h5>Municipio</h5>
+                <asp:DropDownList ID="Municipios" runat="server" OnSelectedIndexChanged="Municipios_SelectedIndexChanged" AutoPostBack = "true" Height="17px" Width="145px" CssClass="auto-style2">
+                    <asp:ListItem ></asp:ListItem>
+                </asp:DropDownList>
+            </div>
+            <div class="ddl_wrap">
+                <h5>Zona</h5>
+                <asp:DropDownList ID="Zona" runat="server" OnSelectedIndexChanged="Zona_SelectedIndexChanged" AutoPostBack="true" Height="16px" Width="90px">
+                    <asp:ListItem ></asp:ListItem>
+                </asp:DropDownList>
+            </div>
+            <div class="ddl_wrap">
+                <h5>Seção</h5>
+                <asp:DropDownList ID="Secao" runat="server" CssClass="auto-style1" Height="16px" Width="86px" OnSelectedIndexChanged="Secao_SelectedIndexChanged" AutoPostBack="true">
+                    <asp:ListItem ></asp:ListItem>
+                </asp:DropDownList>
+            </div>
+            <div class="ddl_wrap">
+                <h5>Cargo Concorrido</h5>
+                <asp:DropDownList ID="Cargo" runat="server" CssClass="auto-style1" Height="17px" Width="151px">
+                    <asp:ListItem></asp:ListItem>
+                    <asp:ListItem >Presidente</asp:ListItem>
+                    <asp:ListItem >Governador</asp:ListItem>
+                    <asp:ListItem >Senador</asp:ListItem>
+                    <asp:ListItem >Deputado Federal</asp:ListItem>
+                    <asp:ListItem >Deputado Estadual</asp:ListItem>
+                </asp:DropDownList>
+            </div>
+             <div class="ddl_wrap">
+                 <h5>Número da Urna</h5>
+                <asp:DropDownList ID="Urna" runat="server" Height="16px" Width="82px">
+                    <asp:ListItem></asp:ListItem>
+                </asp:DropDownList>
+             </div>
+             </div>
+         <asp:Button Text="Buscar" ID="btn_Buscar" runat="server" CssClass="auto-style1" Width="88px" Height="30px" OnClick="Buscar_OnClick" />
+        </div>
+        <div id="detalhe_votos">
+            <asp:Literal ID="lt_detalhe_voto" runat="server" Text =" "/>
+        </div>
+        <asp:ContentPlaceHolder ID ="detalhe_secao_pai" runat="server" Visible="false">
+        <div id="detalhe_secao" visible="false">
+            <asp:Label ID="lb_nr_zona" runat="server" Text=" "></asp:Label>
+            <asp:Label ID="lb_nr_secao" runat="server" Text=" "></asp:Label>
+            <asp:Label ID="lb_nm_municipio" runat="server" Text=" "></asp:Label>
+            <asp:Label ID="lb_qt_aptos" runat="server" Text=" "></asp:Label>
+            <asp:Label ID="lb_qt_comparecimento" runat="server" Text=" "/>
+            <asp:Label ID="lb_qt_abstencoes" runat="server" Text=" "/>
+            <asp:Label ID="lb_qt_eleitores_biometria_nh" runat="server" Text=" "/>
+            <asp:Label ID="lb_ds_agregadas" runat="server" Text=" "/>
+        </div>
+       </asp:ContentPlaceHolder>
+        <div id="urna_detalhes">
+
+            <asp:Image id="imagem_urna" src="App_Themes/urna-2.png" visible="false" runat="server" CssClass="auto-style3" Height="318px" Width="735px"/>
+            <div id="texto_urna">
+            <div id="nr_urna_efetivada">
+                <asp:Label ID="lb_nr_urna_efetivada" runat="server" Text=" "></asp:Label>
+            </div>
+            <div id="cd_flashcard_urna_efetivada">
+                <asp:Label ID="lb_cd_flashcard_urna_efetivada" runat="server" Text=" "></asp:Label>
+            </div>
+            <div id="dt_emissao_bu">
+                 <asp:Label ID="lb_dt_emissao_bu" runat="server" Text=" "></asp:Label>
+            </div>
+            <div id="dt_bu_recebido">
+                <asp:Label ID="lb_dt_bu_recebido" runat="server" Text=" "></asp:Label>
+            </div>
+             <div id="dt_carga_urna_efetivada">
+                <asp:Label ID="lb_dt_carga_urna_efetivada" runat="server" Text=" "></asp:Label>
+            </div>
+             <div id="ds_tipo_urna">
+                <asp:Label ID="lb_ds_tipo_urna" runat="server" Text=" "></asp:Label>
+            </div>
+            </div>
+            
+        </div>
+    </form>
+    <div>
+
+    </div>
+</body>
+
+
+</html>

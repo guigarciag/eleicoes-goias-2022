@@ -1,0 +1,174 @@
+﻿
+#cabecalho{
+    display:flex;
+    flex-direction:row;
+    background-color: #a1ea75;
+    background-size: 900px;
+}
+
+body {
+    background-image: src("urna-2.png");
+}
+
+
+#foto_bandeira {
+    width: 50px;
+    height 50px;
+    margin-left: 20px;
+    border-radius:50% 50% 50% 50% / 50% 50% 50% 50%;
+}
+
+#texto{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    font-family: Cambria;
+    background-color: aliceblue;
+    border-radius: 20px;
+}
+#foto_urna{
+    width:20%;
+    height:20%;
+    border: 2px;
+    margin-left: 50px;
+    border-radius: 54% 46% 52% 48% / 50% 45% 55% 50%;
+}
+#procura{
+    display:flex;
+    margin-right: 10px; 
+    flex-direction: row;
+    align-items:flex-end;
+    justify-content: center;
+    
+
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#ddl {
+    display: flex;
+    margin-right: 10px;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#ddl h5{
+    background-color:aquamarine;
+}
+
+#urna_detalhes{
+    position: relative;
+}
+
+#texto_urna{
+    position: absolute;
+    top: 100px;
+    left:130px;
+    font-size: 12px;
+    color: #e6e2e2;
+}
+
+.informacao_candidato {
+    width: 500px;
+    height: 230px;
+    background: #9deda3;
+    font-size: 15px;
+    margin-top: 90px;
+    margin-bottom: 20px;
+    border-color: #43F962;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 58% 42% 55% 45% / 46% 31% 69% 54%; 
+    justify-content:center;
+}
+
+.informacao_candidato h5 {
+        justify-content: center;
+        align-content: center;
+        text-align:center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/*div com várias informacao_candidato dentro*/
+#detalhe_votos { 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#lt_detalhe_votos{
+    display:flex;
+    flex-direction:column;
+}
+#detalhe_secao{
+    display:flex;
+    flex-direction:column;
+    background-color:aquamarine;
+    width: 450px;
+    border:dotted;
+    border-width: 1px;
+    border-radius: 20px;
+    margin-bottom:50px;
+    margin-top: 50px;
+    text-align:center;
+    padding-bottom:20px;
+    padding-top:20px;
+}
+
+#btn_Buscar {
+    background-color: #2ea44f;
+    border: 1px solid rgba(27, 31, 35, .15);
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 6px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+#btn_Buscar:focus:not(:focus-visible):not(.focus-visible) {
+    box-shadow: none;
+    outline: none;
+}
+
+#btn_Buscar:hover {
+    background-color: #2c974b;
+}
+
+#btn_Buscar:focus {
+    box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+    outline: none;
+}
+
+#btn_Buscar:disabled {
+    background-color: #94d3a2;
+    border-color: rgba(27, 31, 35, .1);
+    color: rgba(255, 255, 255, .8);
+    cursor: default;
+}
+
+#btn_Buscar:active {
+    background-color: #298e46;
+    box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+
+}
